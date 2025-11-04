@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Load & Cache dependencies
         id: cache
-        uses: ./github/actions/cached-deps
+        uses: ./.github/actions/cached-deps
       - name: Lint code
         run: npm run lint
   test:
@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Load & Cache dependencies
         id: cache
-        uses: ./github/actions/cached-deps
+        uses: ./.github/actions/cached-deps
       - name: Test code
         id: run-tests
         run: npm run test
@@ -39,7 +39,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Load & Cache dependencies
         id: cache
-        uses: ./github/actions/cached-deps
+        uses: ./.github/actions/cached-deps
       - name: Build website
         run: npm run build
       - name: Upload artifacts
