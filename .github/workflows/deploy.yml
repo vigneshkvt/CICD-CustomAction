@@ -9,9 +9,11 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v4
-      - name: Load & Cache dependencies
+      - name: Load & Cache dependencies    # Using custom action
         id: cache
         uses: ./.github/actions/cached-deps
+        with:
+          caching: 'false' # Disable caching for lint job
       - name: Lint code
         run: npm run lint
   test:
