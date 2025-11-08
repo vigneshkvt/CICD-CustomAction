@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Ignore node_modules created inside local actions
+/.github/actions/*/node_modules/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
