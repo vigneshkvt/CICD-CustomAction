@@ -71,4 +71,4 @@ jobs:
       - name: Get code
         uses: actions/checkout@v4
       - name: Notify team
-        uses: ./github/actions/deploy-s3-javascript
+        uses: ./.github/actions/deploy-s3-javascript
