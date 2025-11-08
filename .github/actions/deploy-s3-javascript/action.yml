@@ -1,5 +1,5 @@
 name: 'Deploy to S3'
 description: 'An action to deploy built website to an S3 bucket'
 runs:
-  using: node16
-  main: main.js  #pre and post script used for any extra setup/cleanup if needed
+  using: 'node16'
+  main: 'dist/index.js'
